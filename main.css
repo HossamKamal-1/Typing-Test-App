@@ -1,0 +1,187 @@
+/* Start Variables*/
+:root {
+  --main-color: #2196f3;
+}
+/* End Variables*/
+/*Start Global Rules*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*End Global Rules*/
+.levelselect {
+  position: fixed;
+  top: 68.8px;
+  left: 50%;
+  z-index: 99999;
+  width: 100%;
+  z-index: inherit;
+  height: calc(100vh - 68.8px);
+  transform: translate(-50%);
+  background-color: #8400ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: 0.8s;
+}
+.levelselect.invisible {
+  transform: translateX(100%) rotate(360deg);
+}
+.levelselect .text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+.levelselect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.levelselect label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.levelselect [for="easy"] {
+  color: rgb(0, 21, 128);
+}
+.levelselect [for="normal"] {
+  color: rgb(0, 128, 94);
+}
+.levelselect [for="hard"] {
+  color: indianred;
+}
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+.name {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+.message {
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.message span {
+  font-weight: bold;
+  color: #009688;
+}
+.message span::before {
+  content: "[";
+}
+.message span::after {
+  content: "]";
+}
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #006988;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.start:hover {
+  background-color: rgb(19, 52, 184);
+}
+.the-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: var(--main-color);
+  user-select: none;
+}
+@media (max-width: 767px) {
+  .the-word {
+    font-size: 40px;
+  }
+  
+}
+.input {
+  margin: 15px 0;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+.input:focus {
+  outline: none;
+}
+.input:disabled {
+  background-color: #2195f384;
+  color: white;
+  border: 6px solid indianred;
+}
+.upcoming-words {
+  background-color: #fff;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  user-select: none;
+}
+/* Start javascript class */
+.upcoming-words div.firstcoming {
+  background-color: blueviolet;
+}
+/* End javascript class */
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  align-items: center;
+}
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+.finish {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+}
+.finish .good {
+  color: var(--main-color);
+}
+.finish .bad {
+  color: red;
+}
