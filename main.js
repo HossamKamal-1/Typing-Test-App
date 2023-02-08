@@ -6,7 +6,7 @@ const levels = {
   Normal: 40,
   Hard: 30,
 };
-let numberOfWords = 3;
+let numberOfWords = 19;
 let timeInterval;
 // Select DOM Elements
 let startBtn = document.querySelector(".start");
